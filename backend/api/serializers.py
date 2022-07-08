@@ -295,7 +295,7 @@ class RecipeSerializer(serializers.ModelSerializer):
             current_user = self.context.get('request').user
             if Recipe.objects.filter(author=current_user, name=name).exists():
                 raise serializers.ValidationError(
-                    'Рецепт с таким названием у вас уже есть!'
+                    'Рецепт с таким названием у вас уже есть'
                 )
         return name
 
