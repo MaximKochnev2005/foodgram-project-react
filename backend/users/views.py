@@ -1,10 +1,10 @@
-from api.serializers import (CreateFollowSerializer, ShowFollowsSerializer,
+from ..api.serializers import (CreateFollowSerializer, ShowFollowsSerializer,
                              UserSerializer)
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from djoser.views import UserViewSet
-from main.models import Follow
-from main.paginators import SmallPageNumberPagination
+from ..main.models import Follow
+from ..main.paginators import SmallPageNumberPagination
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.generics import ListAPIView

@@ -1,13 +1,13 @@
-from api.permissions import AuthorAdminOrReadOnly
-from api.serializers import (BasketSerializer, FavoriteSerializer,
+from ..api.permissions import AuthorAdminOrReadOnly
+from ..api.serializers import (BasketSerializer, FavoriteSerializer,
                              IngredientSerializer, RecipeFollowSerializer,
                              RecipeSerializer, TagSerializer)
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from ingredients.models import Ingredient
-from recipes.models import Recipe, Tag
+from ..ingredients.models import Ingredient
+from ..recipes.models import Recipe, Tag
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
